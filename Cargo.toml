@@ -1,0 +1,17 @@
+[package]
+name = "gomoku"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+anyhow = "1.0.75"
+eframe = "0.22.0"
+
+[profile.release]
+strip = true
+panic = "abort"
+lto = true
+codegen-units = 1
+opt-level = "z"
